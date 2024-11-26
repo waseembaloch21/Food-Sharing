@@ -1,5 +1,3 @@
-
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
 import {
     getAuth,
@@ -7,7 +5,7 @@ import {
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
     signOut,
-} from "firebase/auth";
+} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
 
 import {
     getFirestore,
@@ -19,14 +17,14 @@ import {
     getDoc,
     deleteDoc,
     updateDoc,
-} from "firebase/firestore";
+} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
 
 import {
     getStorage,
     ref,
     uploadBytes,
     getDownloadURL,
-} from "firebase/storage";
+} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-storage.js";
 
 
 
@@ -65,5 +63,5 @@ export {
     ref,
     uploadBytes,
     getDownloadURL,
-  };
+};
 
