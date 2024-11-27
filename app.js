@@ -6,6 +6,7 @@ import {
     collection,
     db,
   } from "./utils/utils.js";
+  
   getFoods();
   const cards_container = document.getElementById("cards_container");
   // const login_btn = document.getElementById('login_btn')
@@ -76,4 +77,4 @@ import {
   
       cards_container.innerHTML += card;
     });
-  }
+  };

@@ -29,14 +29,14 @@ import {
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyD2ja1nwQbg8g0r3Tlrlih3bhxskrDJQBI",
-    authDomain: "food-sharing-b82e9.firebaseapp.com",
-    projectId: "food-sharing-b82e9",
-    storageBucket: "food-sharing-b82e9.firebasestorage.app",
-    messagingSenderId: "1045181058085",
-    appId: "1:1045181058085:web:b04007ab79e726f28a83cc",
-    measurementId: "G-QDPRC5KXKF"
-};
+    apiKey: "AIzaSyATHRD9cskUkilbt248y40lM2IO9aombu4",
+    authDomain: "pos-2c5e2.firebaseapp.com",
+    projectId: "pos-2c5e2",
+    storageBucket: "pos-2c5e2.appspot.com",
+    messagingSenderId: "191722608677",
+    appId: "1:191722608677:web:b86f74ea3142e6e78047cc"
+  };
+
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
