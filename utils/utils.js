@@ -1,4 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+
 import {
     getAuth,
     onAuthStateChanged,
@@ -26,8 +27,6 @@ import {
     getDownloadURL,
 } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-storage.js";
 
-
-
 const firebaseConfig = {
     apiKey: "AIzaSyATHRD9cskUkilbt248y40lM2IO9aombu4",
     authDomain: "pos-2c5e2.firebaseapp.com",
@@ -37,12 +36,10 @@ const firebaseConfig = {
     appId: "1:191722608677:web:b86f74ea3142e6e78047cc"
   };
 
-
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 const storage = getStorage(app);
-
 
 export {
     auth,

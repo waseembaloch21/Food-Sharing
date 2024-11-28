@@ -1,29 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css">
   <title>Create Recipe</title>
-  
 </head>
+
 <body>
   <form id="submit_food_form">
     <h1>Create Recipe</h1>
 
-    <label for="foodPicture">Add Food Picture</label>
-    <input type="file" id="foodPicture" required />
+    <label for="foodPicture">Add Food Thumbnail URL</label>
+    <input type="url" id="foodPicture" value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_e01dZKD7v6bX6yICzi-rqjGsebFxgMyD5Q&s" required />
 
     <label for="foodName">Food Name</label>
     <input type="text" id="foodName" value="Biryani" required />
 
     <label for="foodLocation">Location</label>
-    <input
-      type="url"
-      id="foodLocation"
-      value="https://maps.app.goo.gl/7cFWFgQtxSHQpw9B6"
-      required
-    />
+    <input type="url" id="foodLocation" value="https://maps.app.goo.gl/7cFWFgQtxSHQpw9B6" required />
 
     <label for="foodPrice">Price</label>
     <input type="number" id="foodPrice" value="1200" required />
@@ -33,4 +29,5 @@
 
   <script src="app.js" type="module"></script>
 </body>
+
 </html>

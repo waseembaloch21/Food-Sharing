@@ -8,33 +8,46 @@
     <title>Food Sharing</title>
 </head>
 
-<body>
+<body class="bg-gray-100">
 
     <nav class="bg-white border-gray-200 dark:bg-gray-900">
-        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
-            <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/fast-food-logo%2Cchef-logo%2Crestaurant-logo%2Cfire-design-template-7648600f54c48617d64e973dd3af8cda_screen.jpg?ts=1663142017"
-                class="h-8 w-8 " alt="Food Logo" />
-            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Love Food</span>
-            </a>
-            <div class="flex items-center space-x-6 rtl:space-x-reverse">
-                <a href="auth/createAccount.html" id="login_btn"
-                    class="text-sm text-blue-600 dark:text-blue-500 hover:underline">Login</a>
-                <a href="auth/createAccount.html" id="user_info"
-                    class="text-sm text-blue-600 dark:text-blue-500 hover:underline"></a>
-                <a href="createRecipe/index.html" id="create_recipe_btn" style="display: none"
-                    class="text-sm text-blue-600 dark:text-blue-500 hover:underline">Create Recipe</a>
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/fast-food-logo%2Cchef-logo%2Crestaurant-logo%2Cfire-design-template-7648600f54c48617d64e973dd3af8cda_screen.jpg?ts=1663142017" class="h-8" alt="Food Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Love Food</span>
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="createRecipe/index.html" id="create_recipe_btn" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" >Create Recipe</a>
+          </li>
+          <li>
+            <a href="auth/createAccount.html"  id="login_btn" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Login</a>
+          </li>
+          <li>
+            <a href="auth/createAccount.html" id="user_info" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"></a>
+          </li>
+          <li>
+            <button id="logout_btn" style="display: none" class="text-gray-900 dark:text-white hover:underline">
+                Logout
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+      
+    </nav> 
 
-                <button id="logout_btn" style="display: none"
-                    class="text-sm text-blue-600 dark:text-blue-500 hover:underline">
-                    Logout
-                </button>
-            </div>
-        </div>
-    </nav>
     <nav class="bg-gray-50 dark:bg-gray-700">
         <div class="max-w-screen-xl px-4 py-3 mx-auto">
-            <div class="flex items-center">
-                <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
+            <div class="flex justify-center md:justify-start">
+                <ul class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-8 text-sm">
                     <li>
                         <a href="#" class="text-gray-900 dark:text-white hover:underline" aria-current="page">All
                             Foods</a>
@@ -47,12 +60,25 @@
         </div>
     </nav>
 
-    <div id="cards_container" style="display: flex; flex-wrap: wrap;gap: 10px;">
+
+    <div id="cards_container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
+
+        <div class="bg-white rounded-lg shadow-md p-4">
+            <h3 class="font-bold text-lg text-gray-800">Food Name</h3>
+            <p class="text-sm text-gray-600 mt-2">Description of the food goes here.</p>
+        </div>
 
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
     <script src="app.js" type="module"></script>
+    <script>
+        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+        const navbar = document.getElementById("navbar");
+        mobileMenuBtn.addEventListener("click", () => {
+            navbar.classList.toggle("hidden");
+        });
+    </script>
 
 </body>
 
